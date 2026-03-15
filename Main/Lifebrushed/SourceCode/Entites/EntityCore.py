@@ -1,5 +1,5 @@
-import Dnd
-import Tags
+import Logic.Dnd as Dnd
+import Logic.Tags as Tags
 
 class CreatureBase() : # guys no one fucking touch this if you touch this the game will break
     def __init__(self, name="placeholder_name", str=0, dex=0, con=0, wil=0, int=0, cha=0, align=Tags.TN):
