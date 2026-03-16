@@ -35,3 +35,9 @@ class CreatureBase() : # guys no one fucking touch this if you touch this the ga
     def getDescription(self):
         description = "the description was too long to put in the __init__ so i made it a function"
         return description
+    
+    def getTags(self):
+        Tags = [
+        
+        ]
+        return Tags
