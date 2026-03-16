@@ -2,7 +2,7 @@ import Logic.Dnd as Dnd
 import Logic.Tags as Tags
 
 class CreatureBase() : # guys no one fucking touch this if you touch this the game will break
-    def __init__(self, name="placeholder_name", str=0, dex=0, con=0, wil=0, int=0, cha=0, align=Tags.TN):
+    def __init__(self, name="Placeholder Name", str=0, dex=0, con=0, wil=0, int=0, cha=0, align=Tags.TN, Id="entity:placeholder_name"):
         self.name = name
         self.description = self.getDescription
         self.strength = str
@@ -33,8 +33,8 @@ class CreatureBase() : # guys no one fucking touch this if you touch this the ga
         return StatBonus
     
     def getDescription(self):
-        description = "the description was too long to put in the __init__ so i made it a function"
-        return description
+        desc = "this is a placeholder description!"
+        return desc
     
     def getTags(self):
         Tags = [

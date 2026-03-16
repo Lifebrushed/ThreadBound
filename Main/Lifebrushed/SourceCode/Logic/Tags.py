@@ -1,64 +1,69 @@
-def findTagIn(tag=LG,list=[]):
-    if tag in list :
-        return true
-    else :
-        return false
-
 # applicable tags onto stuff
 
 #character alignments
 
-LG = "lawful_good"
-NG = "neutral_good"
-CG = "chaotic_good"
+LG = "alignment:lawful_good"
+NG = "alignment:neutral_good"
+CG = "alignment:chaotic_good"
 
-LN = "lawful_neutral"
-TN = "true_neutral"
-CN = "chaotic_neutral"
+LN = "alignment:lawful_neutral"
+TN = "alignment:true_neutral"
+CN = "alignment:chaotic_neutral"
 
-LE = "lawful_evil"
-NE = "neutral_evil"
-CE = "chaotic_evil"
+LE = "alignment:lawful_evil"
+NE = "alignment:neutral_evil"
+CE = "alignment:chaotic_evil"
 
 # elemental proccing
 
-PYRE = "pyreweave"
-TIDE = "tidetwine"
-TEMPEST = "tempestcoil"
-STONE = "stonebind"
+PYRE = "element:pyreweave"
+TIDE = "element:tidetwine"
+TEMPEST = "element:tempestcoil"
+STONE = "element:stonebind"
 
 # physical dmg types
 
-BLUNT = "blunt"
-SLASH = "slashing"
-PIERCE = "piercing"
+BLUNT = "damagetypes:blunt"
+SLASH = "damagetypes:slashing"
+PIERCE = "damagetypes:piercing"
 
 # item rarites
 
-COMMON = "common"
-UNCOMMON = "uncommon"
-RARE = "rare"
-EPIC = "epic"
-LEGENDARY = "legendary"
-MYTHIC = "mythic"
+COMMON = "rarties:common"
+UNCOMMON = "rarties:uncommon"
+RARE = "rarties:rare"
+EPIC = "rarties:epic"
+LEGENDARY = "rarties:legendary"
+MYTHIC = "rarties:mythic"
 
 # size types (for entities)
 
-TINY = "tiny"
-SMALL = "small"
-MEDIUM = "medium"
-LARGE = "large"
-MASSIVE = "massive"
-GARGANTUAN = "gargantuan"
+TINY = "entitysizes:tiny"
+SMALL = "entitysizes:small"
+MEDIUM = "entitysizes:medium"
+LARGE = "entitysizes:large"
+MASSIVE = "entitysizes:massive"
+GARGANTUAN = "entitysizes:gargantuan"
 
 # creature types (for entities)
 
-CELESTIAL = "celestial"
-FIEND = "fiend"
-CONSTRUCT = "construct"
-BEAST = "beast"
-DRAGON = "dragon"
-FEY = "fey"
-HUMANOID = "humanoid"
-UNDEAD = "undead"
+CELESTIAL = "creaturetypes:celestial"
+FIEND = "creaturetypes:fiend"
+CONSTRUCT = "creaturetypes:construct"
+BEAST = "creaturetypes:beast"
+DRAGON = "creaturetypes:dragon"
+FEY = "creaturetypes:fey"
+HUMANOID = "creaturetypes:humanoid"
+UNDEAD = "creaturetypes:undead"
+
+# item types
+RESOURCE = "itemtype:resource"
+EQUIPMENT = "itemtype:equipment"
+WEAPON = "itemtype:weapon"
+
+def findTagIn(tag=LG,list=[]):
+    if tag in list :
+        return True
+    else :
+        return False
 
