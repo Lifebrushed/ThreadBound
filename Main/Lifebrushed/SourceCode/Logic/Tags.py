@@ -26,3 +26,33 @@ STONE = "stonebind"
 BLUNT = "blunt"
 SLASH = "slashing"
 PIERCE = "piercing"
+
+# item rarites
+
+COMMON = "common"
+UNCOMMON = "uncommon"
+RARE = "rare"
+EPIC = "epic"
+LEGENDARY = "legendary"
+MYTHIC = "mythic"
+
+# size types (for entities)
+
+TINY = "tiny"
+SMALL = "small"
+MEDIUM = "medium"
+LARGE = "large"
+MASSIVE = "massive"
+GARGANTUAN = "gargantuan"
+
+# creature types (for entities)
+
+CELESTIAL = "celestial"
+FIEND = "fiend"
+CONSTRUCT = "construct"
+BEAST = "beast"
+DRAGON = "dragon"
+FEY = "fey"
+HUMANOID = "humanoid"
+UNDEAD = "undead"
+
