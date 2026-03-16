@@ -1,7 +1,7 @@
 import Logic.Tags as tags
 
 class item(): #istg i'm going insane please i beg you i need someone else to help me w/ this project
-   def __init__(self, name="placeholder_name_item", rarity=tags.COMMON):
+   def __init__(self, name="placeholder item", rarity=tags.COMMON, itemid="placeholder_item"):
       self.name = name
       self.description = self.getDescription()
       self.rarity = rarity
