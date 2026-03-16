@@ -1,5 +1,5 @@
-def findTagIn(Tag=LG,List=[]):
-    if Tag in List :
+def findTagIn(tag=LG,list=[]):
+    if tag in list :
         return true
     else :
         return false
