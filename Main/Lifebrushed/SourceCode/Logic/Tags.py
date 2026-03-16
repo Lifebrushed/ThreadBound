@@ -1,3 +1,9 @@
+def findTagIn(Tag=LG,List=[]):
+    if Tag in List :
+        return true
+    else :
+        return false
+
 # applicable tags onto stuff
 
 #character alignments
