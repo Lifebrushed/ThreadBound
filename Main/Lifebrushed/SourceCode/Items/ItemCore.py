@@ -1,4 +1,4 @@
-import logic.tags as tags
+import Logic.Tags as tags
 
 class item():
    def __init__(self, name="placeholder name", rarity=tags.COMMON):
