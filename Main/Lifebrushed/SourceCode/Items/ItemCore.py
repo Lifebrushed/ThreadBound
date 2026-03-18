@@ -1,6 +1,6 @@
 import Logic.Tags as tags
 
-class item(): #istg i'm going insane please i beg you i need someone else to help me w/ this project
+class Item(): #istg i'm going insane please i beg you i need someone else to help me w/ this project
    def __init__(self, name="placeholder item", rarity=tags.COMMON, itemid="item:placeholder_item"):
         self.name = name
         self.description = self.getDescription()
@@ -21,6 +21,8 @@ class item(): #istg i'm going insane please i beg you i need someone else to hel
    def getDescription(self):   
         desc = "this is a placeholder description!"
         return desc
-      
+   
+class requirementItem(Item):
+   
    
    
