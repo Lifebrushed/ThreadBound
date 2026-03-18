@@ -1,10 +1,12 @@
 import Logic.Tags as tags
-import Logic.Statblock as statblock
+import Logic.Statblock as stats
+
 class Item(): #istg i'm going insane please i beg you i need someone else to help me w/ this project
    def __init__(self, name="placeholder item", rarity=tags.COMMON, itemid="item:placeholder_item"):
         self.name = name
         self.description = self.getDescription()
         self.rarity = rarity
+
    
    def isEnchantable(self): #check if its enchantable
         return False
@@ -27,6 +29,5 @@ class requirementItem(Item):
       super().__init__(name, rarity, itemid)
    
    def getrequirements(self):
-      req = statblock.Statblock
    
    
