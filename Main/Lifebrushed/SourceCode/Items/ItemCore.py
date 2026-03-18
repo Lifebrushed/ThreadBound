@@ -26,9 +26,15 @@ class Item(): #istg i'm going insane please i beg you i need someone else to hel
    
 class requirementItem(Item):
    def __init__(self, name="placeholder requirement item", rarity=tags.COMMON, itemid="item:placeholder_req_item"):
-        super().__init__(name, rarity, itemid)
+      super().__init__(name, rarity, itemid)
+      self.StatRequirement = getRequirements()
    
-   def getrequirements(self):
-        
+   def getRequirements(self):
+      req = stats.stablock(
+      )
+      return req
+   
+   def checkRequirement(self, player)
+      pass
    
    
