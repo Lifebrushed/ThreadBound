@@ -1,5 +1,5 @@
 import Logic.Tags as tags
-
+import Logic.Statblock as statblock
 class Item(): #istg i'm going insane please i beg you i need someone else to help me w/ this project
    def __init__(self, name="placeholder item", rarity=tags.COMMON, itemid="item:placeholder_item"):
         self.name = name
@@ -23,6 +23,10 @@ class Item(): #istg i'm going insane please i beg you i need someone else to hel
         return desc
    
 class requirementItem(Item):
+   def __init__(self, name="placeholder requirement item", rarity=tags.COMMON, itemid="item:placeholder_req_item"):
+      super().__init__(name, rarity, itemid)
    
+   def getrequirements(self):
+      req = statblock.Statblock
    
    
