@@ -11,8 +11,6 @@ class statblock(): #use this one for requirement checking!
         self.pyreweave = pyr
         self.tidetwine = tde
         self.tempestcoil = tmp
-    
-    
 
         
         
