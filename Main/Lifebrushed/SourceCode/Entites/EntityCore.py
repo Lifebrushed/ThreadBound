@@ -1,16 +1,12 @@
 import Logic.Dnd as Dnd
 import Logic.Tags as Tags
+import Logic.Statblock as stat
 
-class CreatureBase() : # guys no one fucking touch this if you touch this the game will break
+class Entity() : # guys no one fucking touch this if you touch this the game will break
     def __init__(self, name="Placeholder Name", str=0, dex=0, con=0, wil=0, int=0, cha=0, align=Tags.TN, Id="entity:placeholder_name"):
         self.name = name
         self.description = self.getDescription
-        self.strength = str
-        self.dexterity = dex
-        self.constitution = con
-        self.willpower = wil
-        self.intelligence = int
-        self.charisma = cha
+        self.stats = stat.Statblock
         self.level = 1
         self.maxhealth = self.getMaxHealth()
         self.health = self.maxhealth
@@ -43,5 +39,6 @@ class CreatureBase() : # guys no one fucking touch this if you touch this the ga
         return Tags
 
 
-class Humanoid(CreatureBase):
+class Creature(Entity):
+    def __init__(
     
