@@ -7,21 +7,23 @@ class Entity() : # guys no one fucking touch this if you touch this the game wil
         self.Name = name
         self.Description = self.getDescription
         self.Stats = stats
-        self.Levek = 1
+        self.Level = 1
         self.MaxHealth = self.getMaxHealth()
         self.Health = self.maxhealth
         self.AC = self.getArmorClass()
         self.Alignment = align
 
     def getMaxHealth(self):
-        MaxHealth = Dnd.d12(self.level) + self.getStatBonus(self.constitution)
+        MaxHealth = Dnd.d12(self.Level) + self.getStatBonus(self.Stats.constitution)
         return MaxHealth
     
     def TakeDamage(self, damage=0):
         self.Health = self.Health - damage
+        if self.Health <= 0 :
+            print(self.Name + " Died!")
 
     def getArmorClass(self):
-        AC = 10 + self.getStatBonus(self.constitution)
+        AC = 10 + self.getStatBonus(self.Stats.constitution)
         return AC
     
     def getStatBonus(self, stat):
@@ -37,15 +39,6 @@ class Entity() : # guys no one fucking touch this if you touch this the game wil
         
         ]
         return Tags
-
-
-class Creature(Entity):
-    
-    def getBehavioralStats():
-        pass
-    
-    def getBehavioralModifiers():
-        pass
     
     
     
