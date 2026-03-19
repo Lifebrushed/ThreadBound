@@ -1,12 +1,12 @@
 import Logic.Dnd as Dnd
 import Logic.Tags as Tags
-import Logic.Statblock as stat
+import Logic.Statblock as Stat
 
 class Entity() : # guys no one fucking touch this if you touch this the game will break
-    def __init__(self, name="Placeholder Name", str=0, dex=0, con=0, wil=0, int=0, cha=0, align=Tags.TN, Id="entity:placeholder_name"):
+    def __init__(self, name="Placeholder Name", stats=Stat.statblock(), align=Tags.TN, Id="entity:placeholder_name"):
         self.name = name
         self.description = self.getDescription
-        self.stats = stat.Statblock
+        self.stats = stats
         self.level = 1
         self.maxhealth = self.getMaxHealth()
         self.health = self.maxhealth
@@ -40,5 +40,5 @@ class Entity() : # guys no one fucking touch this if you touch this the game wil
 
 
 class Creature(Entity):
-    def __init__(
+    
     
