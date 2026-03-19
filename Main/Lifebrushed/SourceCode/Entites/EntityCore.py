@@ -41,3 +41,7 @@ class CreatureBase() : # guys no one fucking touch this if you touch this the ga
         
         ]
         return Tags
+
+
+class Humanoid(CreatureBase):
+    
