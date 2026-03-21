@@ -73,7 +73,7 @@ class Item():
         self.ID = str("item:" + str(id))
         self.Description = description
 
-class Weapon(Item):
+class Weapon(Item): # IT FUCKING WORKS
     def __init__(self, name, description, statreq : StatBlock, attack : Attack, id):
         super().__init__(name, description, id)
         self.Attack = attack
@@ -88,7 +88,7 @@ class Weapon(Item):
             return False
         if self.StatRequirements.Dexterity > user.Stats.Dexterity :
             return False
-        if self.StatRequirements.Constitution > user.Stats.C :
+        if self.StatRequirements.Constitution > user.Stats.Constitution :
             return False
         if self.StatRequirements.Willpower > user.Stats.Willpower :
             return False

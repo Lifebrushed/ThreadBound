@@ -1,5 +1,6 @@
 import Core
-import Humanoids
+import EntityCore
+import Weapons
 import os
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -7,9 +8,10 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 print(os.getcwd())
 
 def main():
-    testEntity = Humanoids.Humanoid("Test Human", Core.StatBlock(20,20,20,20,20,20,20,13,20,15), "test_human")
-    testEnemy = Humanoids.Humanoid("Test Enemy", Core.StatBlock(20,20,20,20,20,20,20,13,20,15), "test_human")
-    print(testEnemy.Health)
+    testEntity = EntityCore.Player("Test Human", Core.StatBlock(20,20,20,20,20,20,20,13,20,15), "test_player")
+    testEnemy = EntityCore.Player("Test Enemy", Core.StatBlock(10,20,20,20,20,20,20,13,20,15), "test_player")
+    testEntity.equipWeapon(Weapons.LumenitePolearm)
+    testEnemy.equipWeapon(Weapons.LumenitePolearm)
     testEntity.Weapon.Use(testEntity, testEnemy)
     print(testEnemy.Health)
     

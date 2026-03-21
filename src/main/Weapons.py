@@ -8,3 +8,11 @@ Fists = Core.Weapon(
     Attacks.Punch,
     'fist'
 )
+
+LumenitePolearm = Core.Weapon(
+    "Lumenite Polearm",
+    "A sturdy polearm forged from Lumenite.",
+    Core.StatBlock(20,0,0,0,0,0,0,0,0,0),
+    Attacks.Punch,
+    "lumenite_polearm"
+)
