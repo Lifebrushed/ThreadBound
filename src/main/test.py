@@ -1,4 +1,9 @@
 import Core
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+print(os.getcwd())
 
 def main():
     testEntity = Core.Entity("Test", Core.StatBlock(10, 10, 10, 10, 10, 10, 0, 0, 0, 0), "test_entity")
