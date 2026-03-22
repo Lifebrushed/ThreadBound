@@ -1,4 +1,6 @@
 import Dnd
+import Tags
+
 
 class StatBlock(): # 7th time rewriting the code. I'M GOING INSANE
     def __init__(self, str, con, dex, intel, wil, cha, pyreweave, tidetwine, stonebind, tempestcoil):
@@ -27,6 +29,29 @@ class Entity():
         self.Health = self.MaxHealth
         self.AC = self.getArmorClass()
     
+    def getActions(self):
+        actions = [
+            
+        ]
+        return actions
+    
+    def getInitiative(self):
+        initiative = Dnd.roll20() + self.Stats.getStatBonus("Dexterity")
+        return initiative
+
+    def getTags(self):
+        return [
+            Tags.ENTITY
+        ]
+    
+    def checkPlayer(self):
+        if Tags.findTagIn(Tags.PLAYER, self.getTags()) :
+            return True
+        else :
+            return False
+    
+                
+
     def getArmorClass(self):
         bonus = self.Stats.getStatBonus("Constitution")
         ac = 10 + bonus
@@ -42,6 +67,10 @@ class Entity():
         if self.Health < 0:
             print(str(self.Name) + " Died!")
             self.Health = 0
+        
+        
+
+
 
 class Attack():
     def __init__(self, name, count, sides, id):
@@ -49,6 +78,17 @@ class Attack():
         self.Sides = sides
         self.Count = count
         self.ID = str("attack:" + str(id))
+    
+    def getTags(self):
+        return [
+            Tags.ATTACK
+        ]
+    
+    def __str__(self):
+        return self.Name
+        
+    
+
     
     def Use(self, user : Entity, victim : Entity):
         bonus = user.Stats.getStatBonus("Strength")

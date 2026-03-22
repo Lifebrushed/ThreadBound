@@ -2,18 +2,46 @@ import Core
 import EntityCore
 import Weapons
 import os
+import Combat
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 print(os.getcwd())
 
 def main():
-    testEntity = EntityCore.Player("Test Human", Core.StatBlock(20,20,20,20,20,20,20,13,20,15), "test_player")
-    testEnemy = EntityCore.Player("Test Enemy", Core.StatBlock(10,20,20,20,20,20,20,13,20,15), "test_player")
-    testEntity.equipWeapon(Weapons.LumenitePolearm)
-    testEnemy.equipWeapon(Weapons.LumenitePolearm)
-    testEntity.Weapon.Use(testEntity, testEnemy)
-    print(testEnemy.Health)
-    
+    Lifebrush = EntityCore.Humanoid(
+        "Lief Brusche",
+        Core.StatBlock(
+            13,
+            15,
+            18,
+            14,
+            12,
+            10,
+            10,
+            10,
+            10,
+            10
+        ),
+        "lifebrush"
+    )
+    Enemy = EntityCore.Humanoid(
+        "Test Enemy",
+        Core.StatBlock(
+            20,
+            15,
+            10,
+            13,
+            11,
+            10,
+            12,
+            0,
+            15,
+            0
+        ),
+        "enemy_test"
+    )
+
+    Combat.Start(Lifebrush, Enemy)
 if __name__ == "__main__":
     main()
