@@ -12,9 +12,11 @@ def Start(Player : EntityCore.Player, Enemy : EntityCore.Humanoid):
     while Player.Health > 0 and Enemy.Health > 0 :
         if turn % 2 == 0 :
             print(Player.Name + "'s Turn!")
+            Player.CombatTurn(Enemy)
 
         else :
             print(Enemy.Name + "'s Turn!")
+            Enemy.CombatTurn(Player)
         
         time.sleep(2.5)
 

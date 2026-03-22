@@ -1,5 +1,6 @@
 import Dnd
 import Tags
+import random
 
 
 class StatBlock(): # 7th time rewriting the code. I'M GOING INSANE
@@ -49,7 +50,7 @@ class Entity():
             return True
         else :
             return False
-    
+            
                 
 
     def getArmorClass(self):

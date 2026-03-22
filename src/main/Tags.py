@@ -68,7 +68,7 @@ PLAYER = "type:player"
 ATTACK = "type:attack"
 
 
-def findTagIn(tag=LG,list=[]):
+def findTagIn(tag : str , list):
     if tag in list :
         return True
     else :
