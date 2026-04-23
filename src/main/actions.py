@@ -5,8 +5,8 @@ actionlib = []
 class Action():
     def __init__(self, name : str, key : str, displayname : str):
         self.Name = name
-        self.DisplayName = displayname
         self.Key = key
+        self.DisplayName = str("-[ " + self.key + " ]- " + displayname)
 
         self.Enviorment = states.CurrentEnviorment.Main_Menu
     
@@ -24,8 +24,15 @@ def getCurrentAction(key, enviorment):
     for action in actionlib:
         if action.isTriggered(key, enviorment) == True:
             return action
-    
+
     return None
 
+def getUsableActions(enviorment):
+    actionlist = []
+    for action in actionlib:
+        if action.Enviorment == enviorment:
+            actionlist.append
+    
+    return actionlist
 
 
