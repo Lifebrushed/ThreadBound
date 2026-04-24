@@ -1,6 +1,6 @@
 import enum
 
-class CurrentEnviorment(enum.Enum):
+class Enviorments(enum.Enum):
     NoneUI = 0
     Main_Menu = 1
     Game = 2
